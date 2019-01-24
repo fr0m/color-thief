@@ -655,3 +655,13 @@ var MMCQ = (function() {
         quantize: quantize
     };
 })();
+
+if (typeof define === 'function' && define.amd) {
+    define(function () {
+      return ColorThief;
+    });
+} else if (typeof module === 'object' && module.exports) {
+    module.exports = ColorThief;
+} else {
+    window.ColorThief = ColorThief;
+}
